@@ -1,11 +1,11 @@
 *** Settings ***
-Documentation    teste exemplo
 Resource    login_resource.robot
-Log Level    NONE
+
 
 *** Test Cases ***
-Caso teste Exemplo
+Login
     Acessar a interface web
+
     Usuario e senha errados
     Validar o resultado de inputs errados
     Recarregar a Página
@@ -20,3 +20,7 @@ Caso teste Exemplo
 
     Usuario e senha corretos
     Validar o resultado de inputs corretos
+    Recarregar a Página
+
+    Esqueceu a senha
+    Enviar email de recuperação

@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    Variaveis.py  # Certifique-se de que este arquivo Python está acessível
-Log Level    NONE
+Variables    Variaveis_login.py  # Certifique-se de que este arquivo Python está acessível
 
 *** Variables ***
 ${BROWSER}    chrome
@@ -30,6 +29,17 @@ Usuario e senha corretos
     Input Text    class:ant-input    ${USUARIO_CORRETO}
     Input Text    css=[id^='PasswordInput_']    ${SENHA_CORRETA}
     Click Element    css=.ant-btn.ant-btn-primary.login-button
+
+Esqueceu a senha
+    Click Element    css=.login-forget
+    Wait Until Element Is Visible    css=.ant-modal-content   timeout=10
+    Click Element      css=.ant-modal-content .ant-btn.ant-btn-primary
+    Wait Until Page Contains    Alterar senha
+
+Enviar email de recuperação
+    Sleep    2s 
+    Click Element    css=.ant-btn-default
+    Wait Until Page Contains    Email enviado com sucesso
 
 Validar o resultado de inputs errados
     Wait Until Page Contains    Nome de usuário ou senha incorretos.
