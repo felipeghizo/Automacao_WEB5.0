@@ -20,7 +20,3 @@ Login
 
     Usuario e senha corretos
     Validar o resultado de inputs corretos
-    Recarregar a Página
-
-    Esqueceu a senha
-    Enviar email de recuperação

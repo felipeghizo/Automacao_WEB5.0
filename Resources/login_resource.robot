@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    Variaveis_login.py  # Certifique-se de que este arquivo Python está acessível
+Variables    Variaveis.py  # Certifique-se de que este arquivo Python está acessível
 
 *** Variables ***
 ${BROWSER}    chrome
@@ -42,7 +42,7 @@ Enviar email de recuperação
     Wait Until Page Contains    Email enviado com sucesso
 
 Validar o resultado de inputs errados
-    Wait Until Page Contains    Nome de usuário ou senha incorretos.
+    Wait Until Page Contains    Wrong username or password.
 
 Validar o resultado de inputs corretos
     Wait Until Page Contains    admin
