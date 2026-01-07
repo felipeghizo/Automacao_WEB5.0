@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on win32)" generated="2026-01-07T10:26:39.485251" rpa="false" schemaversion="5">
+<suite id="s1" name="Usuarios" source="C:\repos\Automacao\Automacao_WEB5.0\Robot\Usuarios.robot">
+<test id="s1-t1" name="Caso teste Exemplo" line="7">
+<kw name="Acessar a interface web" owner="login_resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:39.762969" level="INFO">Opening browser 'chrome' to base url 'http://10.100.69.140/#/'.</msg>
+<arg>${CAMERA}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-07T10:26:39.762758" elapsed="2.972281"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>class:ant-input</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T10:26:42.735325" elapsed="0.250806"/>
+</kw>
+<status status="PASS" start="2026-01-07T10:26:39.762202" elapsed="3.224065"/>
+</kw>
+<kw name="Usuario e senha corretos" owner="login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:42.987517" level="INFO">Typing text 'admin' into text field 'class:ant-input'.</msg>
+<arg>class:ant-input</arg>
+<arg>${USUARIO_CORRETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T10:26:42.987193" elapsed="0.122450"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:43.110057" level="INFO">Typing text 'admin1234' into text field 'css=[id^='PasswordInput_']'.</msg>
+<arg>css=[id^='PasswordInput_']</arg>
+<arg>${SENHA_CORRETA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T10:26:43.109812" elapsed="0.123591"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:43.233807" level="INFO">Clicking element 'css=.ant-btn.ant-btn-primary.login-button'.</msg>
+<arg>css=.ant-btn.ant-btn-primary.login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T10:26:43.233570" elapsed="0.075230"/>
+</kw>
+<status status="PASS" start="2026-01-07T10:26:42.986762" elapsed="0.322155"/>
+</kw>
+<kw name="Validar o resultado de inputs corretos" owner="login_resource">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>admin</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-07T10:26:43.309583" elapsed="0.026505"/>
+</kw>
+<status status="PASS" start="2026-01-07T10:26:43.309326" elapsed="0.026870"/>
+</kw>
+<kw name="Acessa menu conta" owner="Usuarios_resource">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:48.425151" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-07T10:26:48.425297" level="FAIL">Element 'css=[aria-label="Configurações"]' not visible after 5 seconds.</msg>
+<arg>css=[aria-label="Configurações"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-01-07T10:26:43.337586" elapsed="5.089380">Element 'css=[aria-label="Configurações"]' not visible after 5 seconds.</status>
+</kw>
+<msg time="2026-01-07T10:26:48.427149" level="INFO">${existe} = False</msg>
+<var>${existe}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css=[aria-label="Configurações"]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-01-07T10:26:43.337075" elapsed="5.090100"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-01-07T10:26:48.427832" level="FAIL">Keyword 'SeleniumLibrary.Wait Until Element Is Visible' got positional argument after named arguments.</msg>
+<arg>css=i.anticon.myicon-set</arg>
+<arg>timeout=10s</arg>
+<arg>Click Element</arg>
+<arg>css=i.anticon.myicon-set</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-01-07T10:26:48.427747" elapsed="0.000115">Keyword 'SeleniumLibrary.Wait Until Element Is Visible' got positional argument after named arguments.</status>
+</kw>
+<arg>${existe}</arg>
+<arg>Click Element</arg>
+<arg>css=[aria-label="Configurações"]</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>css=i.anticon.myicon-set</arg>
+<arg>timeout=10s</arg>
+<arg>Click Element</arg>
+<arg>css=i.anticon.myicon-set</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2026-01-07T10:26:48.427396" elapsed="0.000517">Keyword 'SeleniumLibrary.Wait Until Element Is Visible' got positional argument after named arguments.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[contains(text(),'Sistema')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-07T10:26:48.428005" elapsed="0.000020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//li[contains(text(),'Sistema')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-07T10:26:48.428086" elapsed="0.000015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=ugmSet</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-07T10:26:48.428154" elapsed="0.000014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=ugmSet</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-07T10:26:48.428221" elapsed="0.000014"/>
+</kw>
+<status status="FAIL" start="2026-01-07T10:26:43.336671" elapsed="5.091638">Keyword 'SeleniumLibrary.Wait Until Element Is Visible' got positional argument after named arguments.</status>
+</kw>
+<kw name="Criar usuario" owner="Usuarios_resource">
+<status status="NOT RUN" start="2026-01-07T10:26:48.428793" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2026-01-07T10:26:39.761591" elapsed="8.667453">Keyword 'SeleniumLibrary.Wait Until Element Is Visible' got positional argument after named arguments.</status>
+</test>
+<status status="FAIL" start="2026-01-07T10:26:39.489170" elapsed="8.940931"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Usuarios" id="s1" pass="0" fail="1" skip="0">Usuarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

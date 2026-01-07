@@ -13,5 +13,5 @@ possiveis_usuarios_errados = [
 # Randomiza o usuário para que a conta não seja bloqueada.
 USUARIO_ERRADO = possiveis_usuarios_errados[randint(0, len(possiveis_usuarios_errados) - 1)]
 USUARIO_CORRETO = 'admin'
-SENHA_CORRETA = 'admin123'
-CAMERA = 'http://10.100.67.50/#/'
+SENHA_CORRETA = 'admin1234'
+CAMERA = 'http://10.100.69.140/#/'

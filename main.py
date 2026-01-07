@@ -18,7 +18,7 @@ def executar_robot(arquivo_robot):
 
 def main():
     # Lista dos arquivos .robot que você deseja executar
-    arquivos_robot = ['inicializacao.robot', 'login.robot']
+    arquivos_robot = ['Robot/Usuarios.robot']
     
     for arquivo in arquivos_robot:
         try:

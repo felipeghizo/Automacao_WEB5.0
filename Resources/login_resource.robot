@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    Variaveis.py  # Certifique-se de que este arquivo Python está acessível
+Variables    ../Variaveis/Variaveis.py
 
 *** Variables ***
 ${BROWSER}    chrome
