@@ -8,6 +8,7 @@ ${BROWSER}    chrome
 *** Keywords ***
 Acessar a interface web
     Open Browser    ${CAMERA}    ${BROWSER}
+    Maximize Browser Window
     Wait Until Element Is Visible    class:ant-input    timeout=10
 
 Usuario e senha errados
